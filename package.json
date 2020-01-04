@@ -1,0 +1,126 @@
+{
+  "name": "@lykmapipo/cap-consumer",
+  "version": "0.3.0",
+  "description": "Common Alert Protocol consumer",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "clean": "rimraf lib dist es umd logs",
+    "prebuild": "npm test && npm run clean",
+    "build": "rollup -c",
+    "lint": "eslint --fix --ext .js src/ test/ rollup.config.js",
+    "pretest": "npm run lint",
+    "test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha --exit --timeout=8000 --require @babel/register test/**/*.spec.js",
+    "test:unit": "NODE_ENV=test npm run pretest && NODE_ENV=test mocha --exit --timeout=8000 --require @babel/register test/unit/**/*.spec.js",
+    "test:integration": "NODE_ENV=test npm run pretest && NODE_ENV=test mocha --exit --timeout=8000 --require @babel/register test/integration/**/*.spec.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "docs": "doxdox 'lib/**/*.js' -p package.json -l markdown -o DOCUMENTATION.md",
+    "cmt": "git add -A && git-cz",
+    "changelog": "changelog",
+    "chore:deps": "ncu -u && npm install --save",
+    "lint:config": "eslint --print-config rollup.config.js"
+  },
+  "keywords": [
+    "lykmapipo",
+    "client",
+    "request",
+    "common",
+    "alert",
+    "protocol",
+    "cap",
+    "consumer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lykmapipo/cap-consumer.git"
+  },
+  "author": {
+    "name": "lykmapipo",
+    "email": "lallyelias87@gmail.com",
+    "url": "https://github.com/lykmapipo"
+  },
+  "contributors": [
+    {
+      "name": "lykmapipo",
+      "email": "lallyelias87@gmail.com",
+      "url": "https://github.com/lykmapipo"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lykmapipo/cap-consumer/issues"
+  },
+  "homepage": "https://github.com/lykmapipo/cap-consumer#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/register": "^7.7.7",
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/travis-cli": "^8.3.4",
+    "@lykmapipo/test-helpers": "^0.5.1",
+    "chai": "^4.2.0",
+    "commitizen": "^4.0.3",
+    "coveralls": "^3.0.9",
+    "cz-conventional-changelog": "^3.0.2",
+    "doxdox": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsdoc": "^20.0.0",
+    "eslint-plugin-mocha": "^6.2.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "generate-changelog": "^1.8.0",
+    "handlebars": "^4.5.3",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "lodash.template": "^4.5.0",
+    "mocha": "^6.2.2",
+    "nock": "^11.7.1",
+    "npm-check-updates": "^4.0.1",
+    "nyc": "^15.0.0",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.27.14",
+    "shelljs": "^0.8.3"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@lykmapipo/common": ">=0.30.0",
+    "@lykmapipo/env": ">=0.16.2",
+    "@lykmapipo/http-client": ">=0.3.0",
+    "async": ">=3.1.0",
+    "feedparser": ">=2.2.9",
+    "lodash": ">=4.17.15",
+    "xml2js": ">=0.4.23"
+  },
+  "engines": {
+    "node": ">=12.4.0",
+    "npm": ">=6.9.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "npm run lint",
+      "git add -A"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

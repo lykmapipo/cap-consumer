@@ -1,0 +1,517 @@
+
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet type="text/xsl" href="https://cap-sources.s3.amazonaws.com/tz-tma-en/rss-style.xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link rel="hub" href="//alert-hub.appspot.com" />
+    <atom:link rel="self" href="https://cap-sources.s3.amazonaws.com/tz-tma-en/rss.xml" type="application/rss+xml"/>
+    <title>Latest alerts from Tanzania Meteorological Agency</title>
+    <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/rss.xml</link>
+    <description>Latest alerts from Tanzania Meteorological Agency</description>
+    <language>en</language>
+    <copyright>public domain</copyright>
+    <pubDate>Thu, 04 Jul 2019 13:06:12 GMT</pubDate>
+    <lastBuildDate>Wed, 4 Jan 2017 11:31:34 GMT</lastBuildDate>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <image>
+      <title>Latest alerts from Tanzania Meteorological Agency</title>
+      <url>https://alert-hub.s3.amazonaws.com/images/tz-tma-en.png</url>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/rss.xml</link>
+    </image>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-07-04-13-05-51-273.xml</link>
+      <description>Strong winds and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Thu, 04 Jul 2019 13:02:52 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.7.4.13.2.52</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-07-02-12-40-37-019.xml</link>
+      <description>Strong winds and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Tue, 02 Jul 2019 12:37:09 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.7.2.12.37.9</guid>
+    </item>
+    <item>
+      <title>ORANGE WARNING: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-06-26-13-25-26-997.xml</link>
+      <description>Strong winds and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+Likelihood of occurrence is HIGH and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Wed, 26 Jun 2019 13:19:45 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.6.26.13.19.45</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-06-24-13-45-35-143.xml</link>
+      <description>Strong winds and large waves are expected over southern coast, areas of Lindi and Mtwara regions.
+Likelihood of occurrence is HIGH and expected Impacts are LOW.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Mon, 24 Jun 2019 13:34:19 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.6.24.13.34.19</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-06-20-14-53-33-283.xml</link>
+      <description>Strong winds and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Thu, 20 Jun 2019 14:49:19 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.6.20.14.49.19</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-06-18-13-41-11-242.xml</link>
+      <description>Strong winds and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Tue, 18 Jun 2019 13:31:13 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.6.18.13.31.13</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-06-16-14-31-56-242.xml</link>
+      <description>Strong winds and large waves are expected over LAKE VICTORIA and LAKE TANGANYIKA. 
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sun, 16 Jun 2019 14:15:11 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.6.16.14.15.11</guid>
+    </item>
+    <item>
+      <title>ORANGE WARNING: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-06-16-14-16-27-973.xml</link>
+      <description>Strong winds and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+Likelihood of occurrence is HIGH and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sun, 16 Jun 2019 14:12:58 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.6.16.14.12.58</guid>
+    </item>
+    <item>
+      <title>ORANGE WARNING: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-06-14-14-50-16-829.xml</link>
+      <description>Strong winds and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+Likelihood of occurrence is HIGH and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Fri, 14 Jun 2019 14:35:42 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.6.14.14.35.42</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-05-11-15-08-09-442.xml</link>
+      <description>Heavy rains are expected over some areas of Tanga, Pwani and Dar es salaam regions together with Unguja and Pemba isles.  
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sat, 11 May 2019 15:04:32 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.5.11.15.4.32</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-05-11-15-08-09-319.xml</link>
+      <description>Strong winds and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sat, 11 May 2019 15:05:37 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.5.11.15.5.37</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-05-09-13-56-20-385.xml</link>
+      <description>Heavy rains are expected over some areas of Tanga, Pwani and Dar es salaam regions together with Unguja and Pemba isles.  
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Thu, 09 May 2019 13:48:08 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.5.9.13.48.8</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-05-09-13-56-19-462.xml</link>
+      <description>Strong winds and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Thu, 09 May 2019 13:50:08 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.5.9.13.50.8</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-05-07-14-46-32-113.xml</link>
+      <description>Strong winds and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Tue, 07 May 2019 14:24:35 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.5.7.14.24.35</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-05-07-14-31-37-450.xml</link>
+      <description>Heavy rains are expected over some areas of Tanga, Pwani and Dar es salaam regions together with Unguja and Pemba isles.  
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Tue, 07 May 2019 14:24:33 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.5.7.14.24.33</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-05-05-13-55-01-167.xml</link>
+      <description>Heavy rains are expected over some areas of Tanga, Pwani, Morogoro and Dar es salaam regions together with Unguja and Pemba isles. 
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sun, 05 May 2019 13:47:43 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.5.5.13.47.43</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-05-05-13-54-59-763.xml</link>
+      <description>Strong winds and large waves are expected over the entire coast.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sun, 05 May 2019 13:51:17 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.5.5.13.51.17</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS, STRONG WINDS AND LARGE WAVES</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-05-04-14-09-18-796.xml</link>
+      <description>Heavy rains, Strong winds and large waves are expected over some areas of Dar es Salaam, Pwani and Tanga regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sat, 04 May 2019 13:58:57 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.5.4.13.58.57</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-04-29-15-13-50-521.xml</link>
+      <description>Heavy rains are expected over some areas of Lindi, Mtwara, Dar es Salaam, Pwani, Morogoro, Geita and Kagera regions. 
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Mon, 29 Apr 2019 14:56:34 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.4.29.14.56.34</guid>
+    </item>
+    <item>
+      <title>RED WARNING: HEAVY RAINS, STRONG WINDS AND LARGE WAVES</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-04-25-16-29-05-583.xml</link>
+      <description>Heavy rains, Strong winds and large waves are expected over some areas of Lindi and Mtwara.
+Likelihood of occurrence is HIGH and expected Impacts are HIGH.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Thu, 25 Apr 2019 16:18:42 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.4.25.16.18.42</guid>
+    </item>
+    <item>
+      <title>RED WARNING: HEAVY RAINS, STRONG WINDS AND LARGE WAVES</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-04-25-06-09-48-157.xml</link>
+      <description>Heavy rains, Strong winds and large waves are expected over some areas of Lindi and Mtwara.
+Likelihood of occurrence is HIGH and expected Impacts are HIGH.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Thu, 25 Apr 2019 05:57:59 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.4.25.5.57.59</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-04-23-14-48-01-339.xml</link>
+      <description>Strong winds and large waves are expected over coastal areas of Lindi, Mtwara, Pwani, Dar es Salaam and Tanga regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Tue, 23 Apr 2019 14:28:53 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.4.23.14.28.53</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-04-23-14-48-01-334.xml</link>
+      <description>Heavy rains are expected over some areas of Lindi, Mtwara Tanga, Dar es Salaam, Pwani, Arusha, Manyara, Kilimanjaro, Kagera, Geita, Mwanza, Shinyanga, Simiyu, Mara, Singida and Dodoma regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Tue, 23 Apr 2019 14:35:44 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.4.23.14.35.44</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-04-21-14-19-50-928.xml</link>
+      <description>Heavy rains are expected over some areas of Lindi, Mtwara Tanga, Dar es Salaam and Pwani regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sun, 21 Apr 2019 13:57:01 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.4.21.13.57.1</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-04-21-14-04-40-688.xml</link>
+      <description>Strong winds and large waves are expected over coast areas of Lindi, Mtwara, Pwani, Dar es Salaam and Tanga regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sun, 21 Apr 2019 13:47:14 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.4.21.13.47.14</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-04-11-15-20-37-710.xml</link>
+      <description>Heavy rains are expected over some areas of  Tanga, Dar es Salaam and Pwani regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Thu, 11 Apr 2019 14:55:10 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.4.11.14.55.10</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-04-09-15-07-51-308.xml</link>
+      <description>Heavy rains are expected over some areas of  Lindi, Morogoro, Dar es Salaam and Pwani regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Tue, 09 Apr 2019 14:51:23 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.4.9.14.51.23</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-04-07-12-23-57-386.xml</link>
+      <description>Heavy rains are expected over some areas of Tanga, Dar es salaam, Morogoro, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sun, 07 Apr 2019 12:07:55 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.4.7.12.7.55</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-04-05-15-59-17-829.xml</link>
+      <description>Heavy rains are expected over some areas of Tanga, Dar es salaam, Morogoro, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Fri, 05 Apr 2019 15:39:43 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.4.5.15.39.43</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-04-01-14-38-10-563.xml</link>
+      <description>Heavy rains are expected over some areas of  Rukwa, Mbeya, Iringa, Njombe, Songwe, Lindi and Mtwara regions together with mafia island.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Mon, 01 Apr 2019 14:24:56 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.4.1.14.24.56</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-03-30-12-42-18-079.xml</link>
+      <description>Heavy rains are expected over some areas of  Rukwa, Mbeya, Iringa, Njombe, Songwe, Lindi, Mtwara and Morogoro regions.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sat, 30 Mar 2019 12:34:00 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.3.30.12.34.0</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-03-28-15-16-44-461.xml</link>
+      <description>Heavy rains are expected over some areas of Rukwa, Mbeya, Iringa, Njombe, Songwe, Ruvuma, Lindi, Mtwara and Morogoro (south) regions.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Thu, 28 Mar 2019 15:03:37 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.3.28.15.3.37</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-03-06-14-30-20-945.xml</link>
+      <description>Strong winds and large waves are expected along the Tanzania coastal areas. 
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Wed, 06 Mar 2019 14:20:56 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.3.6.14.20.56</guid>
+    </item>
+    <item>
+      <title>ORANGE WARNING: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-02-08-14-55-00-054.xml</link>
+      <description>Strong winds and large waves are expected along the entire coastal areas of Indian Ocean. 
+Likelihood of occurrence is HIGH and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Fri, 08 Feb 2019 14:35:44 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.2.8.14.35.44</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-02-08-06-35-48-868.xml</link>
+      <description>Strong winds and large waves are expected along the Tanzania coastal areas. 
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Fri, 08 Feb 2019 06:17:23 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.2.8.6.17.23</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-01-20-12-58-29-687.xml</link>
+      <description>Heavy rains are expected over some areas of RUKWA, NJOMBE, SONGWE, IRINGA, MBEYA, RUVUMA, MOROGORO(SOUTH), LINDI AND MTWARA REGIONS.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sun, 20 Jan 2019 12:48:48 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.1.20.12.48.48</guid>
+    </item>
+    <item>
+      <title>ORANGE WARNING: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2019-01-20-12-58-28-441.xml</link>
+      <description>Strong winds and large waves are expected along the entire coastal areas of Indian Ocean. 
+Likelihood of occurrence is HIGH and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sun, 20 Jan 2019 12:46:39 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2019.1.20.12.46.39</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2018-12-17-16-22-20-814.xml</link>
+      <description>Heavy rains are expected over some areas of Mbeya, Songwe, Iringa, Dodoma, Singida, Tabora, Katavi, Kigoma, Rukwa, Lindi and Mtwara regions. 
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Mon, 17 Dec 2018 15:56:51 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2018.12.17.15.56.51</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: HEAVY RAINS</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2018-12-13-16-34-01-271.xml</link>
+      <description>Heavy rains are expected over some areas of Mbeya, Songwe, Njombe and Ruvuma.
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread long travel delays ,some road closures, more widespread disruption to infrastructure, resources and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Thu, 13 Dec 2018 15:50:24 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2018.12.13.15.50.24</guid>
+    </item>
+    <item>
+      <title>RED WARNING: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2018-10-24-14-56-29-973.xml</link>
+      <description>Strong winds and large waves are expected along the entire coastal areas of Indian Ocean, 
+Likelihood of occurrence is HIGH and expected Impacts are HIGH.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Wed, 24 Oct 2018 14:34:39 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2018.10.24.14.34.39</guid>
+    </item>
+    <item>
+      <title>RED WARNING: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2018-10-23-14-58-11-287.xml</link>
+      <description>Strong winds and large waves are expected along the entire coastal areas of Indian Ocean, Lake Nyasa, Lake Tanganyika and Lake Victoria. 
+Likelihood of occurrence is HIGH and expected Impacts are HIGH.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Tue, 23 Oct 2018 14:37:21 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2018.10.23.14.37.21</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2018-10-23-08-24-31-041.xml</link>
+      <description>Strong winds are expected along central regions and north eastern highlands 
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Tue, 23 Oct 2018 07:55:43 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2018.10.23.7.55.43</guid>
+    </item>
+    <item>
+      <title>RED WARNING: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2018-10-23-07-54-00-518.xml</link>
+      <description>Strong winds and large waves are expected along the entire coastal areas of Indian Ocean, Lake Nyasa, Lake Tanganyika and Lake Victoria. 
+Likelihood of occurrence is HIGH and expected Impacts are HIGH.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Tue, 23 Oct 2018 07:22:08 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2018.10.23.7.22.8</guid>
+    </item>
+    <item>
+      <title>ORANGE WARNING: Strong winds and Large waves</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2018-10-21-16-00-44-031.xml</link>
+      <description>Strong winds and large waves are expected along the entire coastal areas of Indian Ocean and Southern regions. 
+Likelihood of occurrence is HIGH and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Sun, 21 Oct 2018 15:38:25 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2018.10.21.15.38.25</guid>
+    </item>
+    <item>
+      <title>YELLOW ADVISORY: Strong winds along the Indian Ocean Coast</title>
+      <link>https://cap-sources.s3.amazonaws.com/tz-tma-en/2018-10-19-07-43-31-075.xml</link>
+      <description>Strong winds are expected along the coastal areas of Indian Ocean. 
+Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
+The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</description>
+      <author>severe@meteo.go.tz (Tanzania Meteorological Agency)</author>
+      <category>Met</category>
+      <pubDate>Fri, 19 Oct 2018 07:17:18 +0000</pubDate>
+      <guid>urn:oid:2.49.0.1.834.0.2018.10.19.7.17.18</guid>
+    </item>
+  </channel>
+</rss>
