@@ -49,6 +49,10 @@ npm install
 npm test
 ```
 
+## References
+- [Common_Alerting_Protocol](https://en.wikipedia.org/wiki/Common_Alerting_Protocol)
+- [Common Alerting Protocol Version 1.2](http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html)
+
 ## Contribute
 
 It will be nice, if you open an issue first so that we can know what is going on, then, fork this repo and push in your ideas. Do not forget to add a bit of test(s) of what value you adding.
