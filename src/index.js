@@ -12,11 +12,18 @@ const XML_PARSE_OPTIONS = {
   tagNameProcessors: [processors.stripPrefix],
 };
 
+const DEFAULT_REQUEST_HEADERS = {
+  accept: 'application/xhtml+xml',
+  'content-type': 'application/xhtml+xml',
+  'user-agent':
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36',
+};
+
 /**
  * @function parseAlert
  * @name parseAlert
  * @description Parse given alert from xml to json
- * @param {string} xml valid alert xml.
+ * @param {string} alertXml valid alert xml.
  * @returns {Promise} promise resolve with alert on success
  * or error on failure.
  * @author lally elias <lallyelias87@mail.com>
@@ -27,15 +34,15 @@ const XML_PARSE_OPTIONS = {
  * @public
  * @example
  *
- * parseAlert(xml)
+ * parseAlert(alertXml)
  *   .then(alert => { ... }) // => { identifier: ..., info: { ... } }
  *   .catch(error => { ... });
  */
-export const parseAlert = xml => {
+export const parseAlert = alertXml => {
   // parse alert xml
-  return parseXml(xml, XML_PARSE_OPTIONS).then(json => {
+  return parseXml(alertXml, XML_PARSE_OPTIONS).then(alertJson => {
     // preserve required attributes
-    const alert = mergeObjects(omit(json, '$'), { info: { area: {} } });
+    const alert = mergeObjects(omit(alertJson, '$'), { info: { area: {} } });
 
     // compute hash
     alert.hash = hashOf(alert);
@@ -91,10 +98,14 @@ export const parseAlert = xml => {
  */
 export const fetchAlert = optns => {
   // normalize options
-  const { url, ...options } = mergeObjects(optns);
+  const { url, ...options } = mergeObjects(optns, {
+    headers: DEFAULT_REQUEST_HEADERS,
+  });
 
   // fetch alert
-  return get(url, options);
+  return get(url, options).then(alertXml => {
+    return parseAlert(alertXml);
+  });
 };
 
 export const fetchAlerts = () => {};

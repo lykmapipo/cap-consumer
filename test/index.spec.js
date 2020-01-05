@@ -51,7 +51,7 @@ describe('cap consumer', () => {
       });
   });
 
-  it.skip('should fetch alert', done => {
+  it('should fetch alert', done => {
     nock(BASE_URL)
       .get('/alert.xml')
       .query(true)
@@ -63,6 +63,34 @@ describe('cap consumer', () => {
     fetchAlert({ url: `${BASE_URL}/alert.xml` })
       .then(alert => {
         expect(alert).to.exist;
+        expect(alert.identifier).to.exist;
+        expect(alert.sender).to.exist;
+        expect(alert.sent).to.exist;
+        expect(alert.status).to.exist;
+        expect(alert.msgType).to.exist;
+        expect(alert.scope).to.exist;
+        expect(alert.references).to.exist;
+        expect(alert.info).to.exist;
+        expect(alert.info.language).to.exist;
+        expect(alert.info.category).to.exist;
+        expect(alert.info.event).to.exist;
+        expect(alert.info.responseType).to.exist;
+        expect(alert.info.urgency).to.exist;
+        expect(alert.info.severity).to.exist;
+        expect(alert.info.certainty).to.exist;
+        expect(alert.info.onset).to.exist;
+        expect(alert.info.expires).to.exist;
+        expect(alert.info.senderName).to.exist;
+        expect(alert.info.headline).to.exist;
+        expect(alert.info.description).to.exist;
+        expect(alert.info.instruction).to.exist;
+        expect(alert.info.web).to.exist;
+        expect(alert.info.contact).to.exist;
+        expect(alert.info.area).to.exist;
+        expect(alert.info.area.areaDesc).to.exist;
+        expect(alert.info.area.geometry).to.exist;
+        expect(alert.info.area.centroid).to.exist;
+        expect(alert.hash).to.exist;
         done(null, alert);
       })
       .catch(error => {
