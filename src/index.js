@@ -1,5 +1,6 @@
 import { isEmpty, omit } from 'lodash';
 import { mergeObjects, hashOf } from '@lykmapipo/common';
+import { parseCoordinateString, centroidOf } from '@lykmapipo/geo-tools';
 import { parseStringPromise as parseXml, processors } from 'xml2js';
 import { get } from '@lykmapipo/http-client';
 
@@ -36,21 +37,31 @@ export const parseAlert = xml => {
     // preserve required attributes
     const alert = mergeObjects(omit(json, '$'), { info: { area: {} } });
 
-    // normalize dates
-    //
+    // compute hash
+    alert.hash = hashOf(alert);
+
     // normalize sent date
     alert.sent = !isEmpty(alert.sent) ? new Date(alert.sent) : alert.sent;
+
     // normalize onset date
     alert.info.onset = !isEmpty(alert.info.onset)
       ? new Date(alert.info.onset)
       : alert.info.onset;
+
     // normalize expires date
     alert.info.expires = !isEmpty(alert.info.expires)
       ? new Date(alert.info.expires)
       : alert.info.expires;
 
-    // compute hash
-    alert.hash = hashOf(alert);
+    // parse circle and polygon to geojson geometry
+    if (!isEmpty(alert.info.area.polygon) || !isEmpty(alert.info.area.circle)) {
+      const coordinateString =
+        alert.info.area.polygon || alert.info.area.circle;
+      const geometry = parseCoordinateString(coordinateString);
+      const centroid = centroidOf(geometry);
+      alert.info.area.geometry = geometry;
+      alert.info.area.centroid = centroid;
+    }
 
     // return alerts
     return alert;

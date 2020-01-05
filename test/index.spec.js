@@ -40,7 +40,8 @@ describe('cap consumer', () => {
         expect(alert.info.contact).to.exist;
         expect(alert.info.area).to.exist;
         expect(alert.info.area.areaDesc).to.exist;
-        expect(alert.info.area.polygon).to.exist;
+        expect(alert.info.area.geometry).to.exist;
+        expect(alert.info.area.centroid).to.exist;
         expect(alert.hash).to.exist;
         done(null, alert);
       })
@@ -61,12 +62,10 @@ describe('cap consumer', () => {
 
     fetchAlert({ url: `${BASE_URL}/alert.xml` })
       .then(alert => {
-        console.log(alert);
         expect(alert).to.exist;
         done(null, alert);
       })
       .catch(error => {
-        console.log(error);
         expect(error).to.not.exist;
         done(error);
       });
