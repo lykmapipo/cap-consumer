@@ -26,10 +26,13 @@ npm install --save @lykmapipo/cap-consumer
 ## Usage
 
 ```js
-import { fetchFeed } from '@lykmapipo/cap-consumer';
+import { fetchAlerts, fetchAlert } from '@lykmapipo/cap-consumer';
 
-const fromUrl = 'https://cap.sources.com/rss.xml'
-fetchFeed(fromUrl).then(feed => { ... }).catch(error => { ... });
+const fromUrl = '...';
+fetchAlerts(fromUrl).then(alerts => { ... }).catch(error => { ... });
+
+const fromUrl = '...';
+fetchAlert(fromUrl).then(alert => { ... }).catch(error => { ... });
 
 ```
 
