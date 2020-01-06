@@ -28,7 +28,8 @@
     "alert",
     "protocol",
     "cap",
-    "consumer"
+    "consumer",
+    "feed"
   ],
   "repository": {
     "type": "git",
@@ -92,7 +93,7 @@
     "@lykmapipo/common": ">=0.30.0",
     "@lykmapipo/env": ">=0.16.2",
     "@lykmapipo/geo-tools": ">=0.5.0",
-    "@lykmapipo/http-client": ">=0.3.0",
+    "@lykmapipo/http-client": ">=0.3.1",
     "async": ">=3.1.0",
     "feedparser": ">=2.2.9",
     "lodash": ">=4.17.15",
