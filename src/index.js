@@ -64,12 +64,11 @@ export const parseAlert = alertXml => {
 };
 
 /**
- * @function fetchAlert
- * @name fetchAlert
- * @description Issue http get request to fetch specific alert.
- * @param {object} optns valid fetch options.
- * @param {string} optns.url valid alert full url.
- * @returns {Promise} promise resolve with alert on success
+ * @function parseFeed
+ * @name parseFeed
+ * @description Parse given alert feed from xml to json
+ * @param {object} source valid alert feed readable stream.
+ * @returns {Promise} promise resolve with alert feed on success
  * or error on failure.
  * @author lally elias <lallyelias87@mail.com>
  * @license MIT
@@ -79,27 +78,12 @@ export const parseAlert = alertXml => {
  * @public
  * @example
  *
- * const optns = { url: ... };
- * fetchAlert(optns)
- *   .then(alert => { ... })
+ * parseFeed(readableStream)
+ *   .then(feed => { ... }) // => { channel: ..., items: { ... } }
  *   .catch(error => { ... });
  */
-export const fetchAlert = optns => {
-  // normalize options
-  const { url, ...options } = mergeObjects(optns, {
-    headers: DEFAULT_REQUEST_HEADERS,
-  });
-
-  // fetch alert
-  return get(url, options).then(alertXml => {
-    return parseAlert(alertXml);
-  });
-};
-
-// TODO: export, document, test
-export const readFeed = source => {
-  // readFeedStream | readFeedSource
-  return new Promise((resolve, reject) => {
+export const parseFeed = source =>
+  new Promise((resolve, reject) => {
     // initialize feedparser
     const feedParser = new FeedParser({ addmeta: false });
 
@@ -137,6 +121,38 @@ export const readFeed = source => {
     // pipe reponse data to feedParser
     source.pipe(feedParser);
   });
+
+/**
+ * @function fetchAlert
+ * @name fetchAlert
+ * @description Issue http get request to fetch specific alert.
+ * @param {object} optns valid fetch options.
+ * @param {string} optns.url valid alert full url.
+ * @returns {Promise} promise resolve with alert on success
+ * or error on failure.
+ * @author lally elias <lallyelias87@mail.com>
+ * @license MIT
+ * @since 0.1.0
+ * @version 0.1.0
+ * @static
+ * @public
+ * @example
+ *
+ * const optns = { url: ... };
+ * fetchAlert(optns)
+ *   .then(alert => { ... })
+ *   .catch(error => { ... });
+ */
+export const fetchAlert = optns => {
+  // normalize options
+  const { url, ...options } = mergeObjects(optns, {
+    headers: DEFAULT_REQUEST_HEADERS,
+  });
+
+  // fetch alert
+  return get(url, options).then(alertXml => {
+    return parseAlert(alertXml);
+  });
 };
 
 // TODO: export, document, test
@@ -149,7 +165,7 @@ export const fetchFeed = optns => {
 
   // fetch feed
   return get(url, options).then(response => {
-    return readFeed(response);
+    return parseFeed(response);
   });
 };
 

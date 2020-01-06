@@ -1,4 +1,5 @@
 import { omitBy, startsWith } from 'lodash';
+import { mergeObjects } from '@lykmapipo/common';
 import { processors } from 'xml2js';
 
 /**
@@ -57,6 +58,7 @@ export const XML_PARSE_OPTIONS = {
  * // => { ... }
  */
 export const normalize = (obj = {}) => {
+  // remove unused properties
   const normalized = omitBy(obj, (value, key) => {
     return (
       startsWith(key, 'rss') ||
@@ -66,5 +68,6 @@ export const normalize = (obj = {}) => {
       startsWith(key, '$')
     );
   });
-  return normalized;
+  // return
+  return mergeObjects(normalized);
 };

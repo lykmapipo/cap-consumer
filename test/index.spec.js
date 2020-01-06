@@ -1,11 +1,11 @@
 import { createReadStream, readFileSync } from 'fs';
 import { expect, nock } from '@lykmapipo/test-helpers';
 
-import { parseAlert, fetchAlert, fetchFeed } from '../src';
+import { parseAlert, parseFeed, fetchAlert, fetchFeed } from '../src';
 
 const BASE_URL = 'https://cap-sources.s3.amazonaws.com/tz-tma-en';
 
-describe('cap consumer', () => {
+describe('consumer', () => {
   beforeEach(() => {
     nock.cleanAll();
   });
@@ -44,6 +44,21 @@ describe('cap consumer', () => {
         expect(alert.info.area.centroid).to.exist;
         expect(alert.hash).to.exist;
         done(null, alert);
+      })
+      .catch(error => {
+        expect(error).to.not.exist;
+        done(error);
+      });
+  });
+
+  it('should parse alerts feed', done => {
+    const source = createReadStream(`${__dirname}/fixtures/feed.xml`);
+    parseFeed(source)
+      .then(feed => {
+        expect(feed).to.exist.and.be.an('object');
+        expect(feed.channel).to.exist.and.be.an('object');
+        expect(feed.items).to.exist.and.be.an('array');
+        done(null, feed);
       })
       .catch(error => {
         expect(error).to.not.exist;
@@ -99,7 +114,7 @@ describe('cap consumer', () => {
       });
   });
 
-  it('should fetch feed', done => {
+  it('should fetch alerts feed', done => {
     nock(BASE_URL)
       .get('/feed.xml')
       .query(true)
@@ -110,7 +125,9 @@ describe('cap consumer', () => {
 
     fetchFeed({ url: `${BASE_URL}/feed.xml` })
       .then(feed => {
-        expect(feed).to.exist;
+        expect(feed).to.exist.and.be.an('object');
+        expect(feed.channel).to.exist.and.be.an('object');
+        expect(feed.items).to.exist.and.be.an('array');
         done(null, feed);
       })
       .catch(error => {

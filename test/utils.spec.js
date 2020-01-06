@@ -42,5 +42,7 @@ describe('utils', () => {
     expect(normalized).to.not.have.a.property('#');
     expect(normalized).to.not.have.a.property('@');
     expect(normalized).to.not.have.a.property('$');
+
+    expect(normalize()).to.be.eql({});
   });
 });
