@@ -1,7 +1,7 @@
 import { createReadStream, readFileSync } from 'fs';
 import { expect, nock } from '@lykmapipo/test-helpers';
 
-import { parseAlert, fetchAlert } from '../src';
+import { parseAlert, fetchAlert, fetchFeed } from '../src';
 
 const BASE_URL = 'https://cap-sources.s3.amazonaws.com/tz-tma-en';
 
@@ -92,6 +92,26 @@ describe('cap consumer', () => {
         expect(alert.info.area.centroid).to.exist;
         expect(alert.hash).to.exist;
         done(null, alert);
+      })
+      .catch(error => {
+        expect(error).to.not.exist;
+        done(error);
+      });
+  });
+
+  it('should fetch feed', done => {
+    nock(BASE_URL)
+      .get('/feed.xml')
+      .query(true)
+      .reply(200, function onReply() {
+        expect(this.req.headers).to.exist;
+        return createReadStream(`${__dirname}/fixtures/feed.xml`);
+      });
+
+    fetchFeed({ url: `${BASE_URL}/feed.xml` })
+      .then(feed => {
+        expect(feed).to.exist;
+        done(null, feed);
       })
       .catch(error => {
         expect(error).to.not.exist;
