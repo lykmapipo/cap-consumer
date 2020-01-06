@@ -1,8 +1,8 @@
-import { isEmpty } from 'lodash';
-import { mergeObjects, hashOf } from '@lykmapipo/common';
+import { isEmpty, map } from 'lodash';
+import { compact, mergeObjects, hashOf } from '@lykmapipo/common';
 import { parseCoordinateString, centroidOf } from '@lykmapipo/geo-tools';
 import { parseStringPromise as parseXml } from 'xml2js';
-import { get } from '@lykmapipo/http-client';
+import { all, get } from '@lykmapipo/http-client';
 import FeedParser from 'feedparser';
 
 import { DEFAULT_REQUEST_HEADERS, XML_PARSE_OPTIONS, normalize } from './utils';
@@ -113,7 +113,7 @@ export const parseFeed = source =>
       // read items from the stream
       while ((item = stream.read()) !== null) {
         const copyOfItem = normalize(item);
-        feed.items.push(copyOfItem);
+        feed.items = compact([...feed.items, copyOfItem]);
       }
       /* eslint-enable */
     });
@@ -128,8 +128,9 @@ export const parseFeed = source =>
  * @description Issue http get request to fetch specific alert.
  * @param {object} optns valid fetch options.
  * @param {string} optns.url valid alert full url.
- * @returns {Promise} promise resolve with alert on success
+ * @returns {Promise} promise resolve with alert in CAP format on success
  * or error on failure.
+ * @see {@link http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html}
  * @author lally elias <lallyelias87@mail.com>
  * @license MIT
  * @since 0.1.0
@@ -146,6 +147,7 @@ export const parseFeed = source =>
 export const fetchAlert = optns => {
   // normalize options
   const { url, ...options } = mergeObjects(optns, {
+    responseType: 'text',
     headers: DEFAULT_REQUEST_HEADERS,
   });
 
@@ -161,8 +163,9 @@ export const fetchAlert = optns => {
  * @description Issue http get request to fetch alerts feed.
  * @param {object} optns valid fetch options.
  * @param {string} optns.url valid alert feed full url.
- * @returns {Promise} promise resolve with alert feed on success
+ * @returns {Promise} promise resolve with alerts in feed format on success
  * or error on failure.
+ * @see {@link https://cyber.harvard.edu/rss/rss.html}
  * @author lally elias <lallyelias87@mail.com>
  * @license MIT
  * @since 0.1.0
@@ -189,10 +192,39 @@ export const fetchFeed = optns => {
   });
 };
 
-// TODO: export, document, test
-export const fetchAlerts = () => {
+/**
+ * @function fetchAlerts
+ * @name fetchAlerts
+ * @description Issue http get request to fetch alerts from feed.
+ * @param {object} optns valid fetch options.
+ * @param {string} optns.url valid alert feed full url.
+ * @returns {Promise} promise resolve with alerts in CAP format on success
+ * or error on failure.
+ * @see {@link http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html}
+ * @author lally elias <lallyelias87@mail.com>
+ * @license MIT
+ * @since 0.1.0
+ * @version 0.1.0
+ * @static
+ * @public
+ * @example
+ *
+ * const optns = { url: ... };
+ * fetchAlerts(optns)
+ *   .then(alert => { ... })
+ *   .catch(error => { ... });
+ */
+export const fetchAlerts = optns => {
   // fetch feed
-  // fetch alerts
-  // cleanup alerts(parseAlert)
-  // merge feed + fetched
+  return fetchFeed(optns).then(({ channel = {}, items = [] }) => {
+    // collect feed item links
+    const urls = compact(map([...items], item => item.link));
+    // prepare alert fetch promises
+    const tasks = map(urls, url => fetchAlert(mergeObjects(optns, { url })));
+    // fetch alerts in parallel
+    return all(...tasks).then(alerts => {
+      // return alerts in CAP format
+      return { channel, items: alerts };
+    });
+  });
 };

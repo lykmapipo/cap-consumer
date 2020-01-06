@@ -26,14 +26,12 @@ npm install --save @lykmapipo/cap-consumer
 ## Usage
 
 ```js
-import { fetchAlerts, fetchAlert } from '@lykmapipo/cap-consumer';
+import { fetchAlerts } from '@lykmapipo/cap-consumer';
 
-const fromUrl = '...';
-fetchAlerts(fromUrl).then(alerts => { ... }).catch(error => { ... });
-
-const fromUrl = '...';
-fetchAlert(fromUrl).then(alert => { ... }).catch(error => { ... });
-
+const optns = { url: 'https://cap-sources.s3.amazonaws.com/tz-tma-en/rss.xml' };
+fetchAlerts(optns)
+  .then(alerts => { ... }) // => { channel: { ... }, items: [ ... ] }
+  .catch(error => { ... });
 ```
 
 ## Test
@@ -53,6 +51,7 @@ npm test
 ```
 
 ## References
+- [RSS 2.0 Specification](https://cyber.harvard.edu/rss/rss.html)
 - [Common_Alerting_Protocol](https://en.wikipedia.org/wiki/Common_Alerting_Protocol)
 - [Common Alerting Protocol Version 1.2](http://docs.oasis-open.org/emergency/cap/v1.2/CAP-v1.2-os.html)
 
