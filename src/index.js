@@ -155,7 +155,27 @@ export const fetchAlert = optns => {
   });
 };
 
-// TODO: export, document, test
+/**
+ * @function fetchFeed
+ * @name fetchFeed
+ * @description Issue http get request to fetch alerts feed.
+ * @param {object} optns valid fetch options.
+ * @param {string} optns.url valid alert feed full url.
+ * @returns {Promise} promise resolve with alert feed on success
+ * or error on failure.
+ * @author lally elias <lallyelias87@mail.com>
+ * @license MIT
+ * @since 0.1.0
+ * @version 0.1.0
+ * @static
+ * @public
+ * @example
+ *
+ * const optns = { url: ... };
+ * fetchFeed(optns)
+ *   .then(alert => { ... })
+ *   .catch(error => { ... });
+ */
 export const fetchFeed = optns => {
   // normalize options
   const { url, ...options } = mergeObjects(optns, {
