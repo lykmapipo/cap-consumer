@@ -16,10 +16,10 @@ describe('consumer', () => {
     nock.cleanAll();
   });
 
-  it('should parse alert xml to json', done => {
+  it('should parse alert xml to json', (done) => {
     const xml = readFileSync(`${__dirname}/fixtures/alert.xml`, 'utf-8');
     parseAlert(xml)
-      .then(alert => {
+      .then((alert) => {
         expect(alert).to.exist;
         expect(alert.identifier).to.exist;
         expect(alert.sender).to.exist;
@@ -51,28 +51,28 @@ describe('consumer', () => {
         expect(alert.hash).to.exist;
         done(null, alert);
       })
-      .catch(error => {
+      .catch((error) => {
         expect(error).to.not.exist;
         done(error);
       });
   });
 
-  it('should parse alerts feed', done => {
+  it('should parse alerts feed', (done) => {
     const source = createReadStream(`${__dirname}/fixtures/feed.xml`);
     parseFeed(source)
-      .then(feed => {
+      .then((feed) => {
         expect(feed).to.exist.and.be.an('object');
         expect(feed.channel).to.exist.and.be.an('object');
         expect(feed.items).to.exist.and.be.an('array');
         done(null, feed);
       })
-      .catch(error => {
+      .catch((error) => {
         expect(error).to.not.exist;
         done(error);
       });
   });
 
-  it('should fetch alert', done => {
+  it('should fetch alert', (done) => {
     nock(BASE_URL)
       .get('/alert.xml')
       .query(true)
@@ -82,7 +82,7 @@ describe('consumer', () => {
       });
 
     fetchAlert({ url: `${BASE_URL}/alert.xml` })
-      .then(alert => {
+      .then((alert) => {
         expect(alert).to.exist;
         expect(alert.identifier).to.exist;
         expect(alert.sender).to.exist;
@@ -114,13 +114,13 @@ describe('consumer', () => {
         expect(alert.hash).to.exist;
         done(null, alert);
       })
-      .catch(error => {
+      .catch((error) => {
         expect(error).to.not.exist;
         done(error);
       });
   });
 
-  it('should fetch alerts feed', done => {
+  it('should fetch alerts feed', (done) => {
     nock(BASE_URL)
       .get('/feed.xml')
       .query(true)
@@ -130,19 +130,19 @@ describe('consumer', () => {
       });
 
     fetchFeed({ url: `${BASE_URL}/feed.xml` })
-      .then(feed => {
+      .then((feed) => {
         expect(feed).to.exist.and.be.an('object');
         expect(feed.channel).to.exist.and.be.an('object');
         expect(feed.items).to.exist.and.be.an('array');
         done(null, feed);
       })
-      .catch(error => {
+      .catch((error) => {
         expect(error).to.not.exist;
         done(error);
       });
   });
 
-  it('should fetch alerts', done => {
+  it('should fetch alerts', (done) => {
     nock(BASE_URL)
       .get('/feed.xml')
       .query(true)
@@ -160,7 +160,7 @@ describe('consumer', () => {
       });
 
     fetchAlerts({ url: `${BASE_URL}/feed.xml` })
-      .then(alerts => {
+      .then((alerts) => {
         expect(alerts).to.exist.and.be.an('object');
         expect(alerts.channel).to.exist.and.be.an('object');
         expect(alerts.items).to.exist.and.be.an('array');
@@ -198,7 +198,7 @@ describe('consumer', () => {
 
         done(null, alerts);
       })
-      .catch(error => {
+      .catch((error) => {
         expect(error).to.not.exist;
         done(error);
       });

@@ -26,9 +26,9 @@ import { DEFAULT_REQUEST_HEADERS, XML_PARSE_OPTIONS, normalize } from './utils';
  *   .then(alert => { ... }) // => { identifier: ..., info: { ... } }
  *   .catch(error => { ... });
  */
-export const parseAlert = alertXml => {
+export const parseAlert = (alertXml) => {
   // parse alert xml
-  return parseXml(alertXml, XML_PARSE_OPTIONS).then(alertJson => {
+  return parseXml(alertXml, XML_PARSE_OPTIONS).then((alertJson) => {
     // preserve required attributes
     const alert = mergeObjects(normalize(alertJson), { info: { area: {} } });
 
@@ -82,7 +82,7 @@ export const parseAlert = alertXml => {
  *   .then(feed => { ... }) // => { channel: ..., items: { ... } }
  *   .catch(error => { ... });
  */
-export const parseFeed = source =>
+export const parseFeed = (source) =>
   new Promise((resolve, reject) => {
     // initialize feedparser
     const feedParser = new FeedParser({ addmeta: false });
@@ -91,16 +91,16 @@ export const parseFeed = source =>
     const feed = { channel: {}, items: [] };
 
     // handle stream error
-    source.on('error', error => reject(error));
+    source.on('error', (error) => reject(error));
 
     // handle feed parsing errors
-    feedParser.on('error', error => reject(error));
+    feedParser.on('error', (error) => reject(error));
 
     // handle feed parsing end
     feedParser.on('end', () => resolve(feed));
 
     // handle feed meta parsing
-    feedParser.on('meta', meta => {
+    feedParser.on('meta', (meta) => {
       feed.channel = normalize(meta);
     });
 
@@ -144,7 +144,7 @@ export const parseFeed = source =>
  *   .then(alert => { ... })
  *   .catch(error => { ... });
  */
-export const fetchAlert = optns => {
+export const fetchAlert = (optns) => {
   // normalize options
   const { url, ...options } = mergeObjects(optns, {
     responseType: 'text',
@@ -152,7 +152,7 @@ export const fetchAlert = optns => {
   });
 
   // fetch alert
-  return get(url, options).then(alertXml => {
+  return get(url, options).then((alertXml) => {
     return parseAlert(alertXml);
   });
 };
@@ -179,7 +179,7 @@ export const fetchAlert = optns => {
  *   .then(alert => { ... })
  *   .catch(error => { ... });
  */
-export const fetchFeed = optns => {
+export const fetchFeed = (optns) => {
   // normalize options
   const { url, ...options } = mergeObjects(optns, {
     responseType: 'stream',
@@ -187,7 +187,7 @@ export const fetchFeed = optns => {
   });
 
   // fetch feed
-  return get(url, options).then(response => {
+  return get(url, options).then((response) => {
     return parseFeed(response);
   });
 };
@@ -214,15 +214,15 @@ export const fetchFeed = optns => {
  *   .then(alert => { ... })
  *   .catch(error => { ... });
  */
-export const fetchAlerts = optns => {
+export const fetchAlerts = (optns) => {
   // fetch feed
   return fetchFeed(optns).then(({ channel = {}, items = [] }) => {
     // collect feed item links
-    const urls = compact(map([...items], item => item.link));
+    const urls = compact(map([...items], (item) => item.link));
     // prepare alert fetch promises
-    const tasks = map(urls, url => fetchAlert(mergeObjects(optns, { url })));
+    const tasks = map(urls, (url) => fetchAlert(mergeObjects(optns, { url })));
     // fetch alerts in parallel
-    return all(...tasks).then(alerts => {
+    return all(...tasks).then((alerts) => {
       // return alerts in CAP format
       return { channel, items: alerts };
     });
