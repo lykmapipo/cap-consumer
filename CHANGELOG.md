@@ -1,3 +1,14 @@
+#### 0.1.25 (2020-09-05)
+
+##### Chores
+
+* **deps:**  force latest version & audit fix ([8620099e](https://github.com/lykmapipo/cap-consumer/commit/8620099e5cd67d21c558669062a74727a4b238bb))
+
+##### Tests
+
+* **fixtures:**  update images ([fc382ec8](https://github.com/lykmapipo/cap-consumer/commit/fc382ec86d839c081afb4610db4f392b6a3a87bd))
+*  fix fetch alerts n-times calls ([8b23800f](https://github.com/lykmapipo/cap-consumer/commit/8b23800f41452f3b6c029043a9e67c1b2aab30f5))
+
 #### 0.1.24 (2020-09-02)
 
 ##### Chores
