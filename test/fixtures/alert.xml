@@ -1,33 +1,30 @@
-
-
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="https://cap-sources.s3.amazonaws.com/tz-tma-en/alert-style.xsl" ?>
-<cap:alert xmlns:cap="urn:oasis:names:tc:emergency:cap:1.1" >
-  <cap:identifier>urn:oid:2.49.0.0.834.0.2019.7.4.13.2.52</cap:identifier>
+<cap:alert xmlns:cap="urn:oasis:names:tc:emergency:cap:1.2">
+  <cap:identifier>urn:oid:2.49.0.1.834.0.2020.8.9.12.48.58</cap:identifier>
   <cap:sender>severe@meteo.go.tz</cap:sender>
-  <cap:sent>2019-07-04T13:02:52-00:00</cap:sent>
+  <cap:sent>2020-08-09T15:48:58+03:00</cap:sent>
   <cap:status>Actual</cap:status>
   <cap:msgType>Alert</cap:msgType>
   <cap:scope>Public</cap:scope>
-  <cap:references>severe@meteo.go.tz,urn:oid:2.49.0.0.834.0.2018.7.7.14.41.41,2018-07-07T14:41:41-00:00</cap:references>
+  <cap:references>severe@meteo.go.tz,urn:oid:2.49.0.1.834.0.2020.8.9.12.48.58,2020-08-09T15:48:58+03:00</cap:references>
   <cap:info>
     <cap:language>en</cap:language>
     <cap:category>Met</cap:category>
-    <cap:event>Strong winds and Large waves.</cap:event>
+    <cap:event>Strong wind and large waves.</cap:event>
     <cap:responseType>Monitor</cap:responseType>
     <cap:urgency>Expected</cap:urgency>
     <cap:severity>Moderate</cap:severity>
     <cap:certainty>Likely</cap:certainty>
-    <cap:onset>2019-07-04T18:00:00+03:00</cap:onset>
-    <cap:expires>2019-07-06T18:00:00+03:00</cap:expires>
-    <cap:senderName>Tanzania Meteorological Agency</cap:senderName>
-    <cap:headline>YELLOW ADVISORY: Strong winds and Large waves</cap:headline>
-    <cap:description>Strong winds and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
-Likelihood of occurrence is MODERATE and expected Impacts are MODERATE.
-The expected impacts of this phenomenon are widespread of rubbish, falling of leaves and small tree branches, challenge to some of marine activities, scarcity of fish and associated impacts.</cap:description>
-    <cap:instruction>Sea users and Residents of high risk areas are advised TO TAKE ACTIONS
-
-TMA will continue to monitor the situation and issue updates when necessary.</cap:instruction>
+    <cap:onset>2020-08-09T18:00:00+03:00</cap:onset>
+    <cap:expires>2020-08-09T23:00:00+03:00</cap:expires>
+    <cap:senderName>Tanzania Meteorological Authority</cap:senderName>
+    <cap:headline>YELLOW ADVISORY: Strong wind and large waves</cap:headline>
+    <cap:description>Strong wind and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.
+      Likelihood of occurrence is MEDIUM and expected Impacts are MODERATE.
+      The expected impacts of this phenomenon are disruption to marine activities.</cap:description>
+    <cap:instruction>Sea users of high risk areas are advised TO BE PREPARED.
+      TMA will continue to monitor the situation and issue updates when necessary.</cap:instruction>
     <cap:web>http://www.meteo.go.tz</cap:web>
     <cap:contact>met@meteo.go.tz</cap:contact>
     <cap:area>
@@ -35,4 +32,23 @@ TMA will continue to monitor the situation and issue updates when necessary.</ca
       <cap:polygon>-4.7,39.3 -5.2,38.6 -6.1,38.5 -6.9,39.3 -7.6,39.1 -8.4,39 -9.4,39.3 -10.4,39.7 -10.6,40.2 -10.1,40.6 -9.7,40.8 -9,40.3 -8.4,40 -6.8,40.2 -6.1,40.1 -5.2,39.9 -4.9,39.8 -4.7,39.3</cap:polygon>
     </cap:area>
   </cap:info>
+  <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+    <ds:SignedInfo>
+      <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" />
+      <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+      <ds:Reference>
+        <ds:Transforms>
+          <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </ds:Transforms>
+        <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+        <ds:DigestValue>cOnH5SgS2+DL5h9ew3EvndRGYqHeard8wOGZ3wKt/W0=</ds:DigestValue>
+      </ds:Reference>
+    </ds:SignedInfo>
+    <ds:SignatureValue>nuFIxu2ljNKE8vwrOP0VQ0q/beSwGTjfWTzOYQGDS9ZmzgGl4OQqGTo6LeJlhs3GonVifREv8awXzNKc6w5Ph4fxSjw1ARNRH/HVbqmJWKS5GeWY5YRLlLfxBZveO7AGiDKs2g+KKBcb+uD+HM8xCuqbWO5RNSzYh2tal9qLkdcAylho5Fni28b2RoxgLPLgU8KCqEr7qoJD1E10T/h5YTUDL6hSlG9xv8YKqGnR0PLxJPsz30lkgfinnHHxo8HyIA+7YGSJPhXzBU8gV/LwHs8bNOnjZcTU3dO7oNC/tWt1SqUi+z3Al0Dd0Ifs/BgO6dkmxJa3ed3q++nJnjN8mw==</ds:SignatureValue>
+    <ds:KeyInfo>
+      <ds:X509Data>
+        <ds:X509Certificate>MIIECzCCAvOgAwIBAgIBADANBgkqhkiG9w0BAQsFADCBnzELMAkGA1UEBhMCVVMxETAPBgNVBAgMCFZpcmdpbmlhMQ8wDQYDVQQHDAZSZXN0b24xFjAUBgNVBAoMDWFsZXJ0LWh1Yi5vcmcxDjAMBgNVBAsMBWFkbWluMRgwFgYDVQQDDA9FbGlvdCBDaHJpc3RpYW4xKjAoBgkqhkiG9w0BCQEWG2VsaW90LmouY2hyaXN0aWFuQGdtYWlsLmNvbTAeFw0xOTA3MjIxMDQzMzRaFw0yOTA3MTkxMDQzMzRaMIGfMQswCQYDVQQGEwJVUzERMA8GA1UECAwIVmlyZ2luaWExDzANBgNVBAcMBlJlc3RvbjEWMBQGA1UECgwNYWxlcnQtaHViLm9yZzEOMAwGA1UECwwFYWRtaW4xGDAWBgNVBAMMD0VsaW90IENocmlzdGlhbjEqMCgGCSqGSIb3DQEJARYbZWxpb3Quai5jaHJpc3RpYW5AZ21haWwuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw5KiaOWF0XAG8LmFOFmGpbf4a+Ro3Y7t85+ytyiPLWcdLyjvbiwzRBVu5A2MCBHjJQWmHm3Et3nJxnI58pN3VZ7/3cEEOYpsveR1EJuWwC6Ow9bU1qJjLvIfw+IQ9dmZ1XZuJZCUooeVdWb0JVjedUZ7gwBs3qHxypxEAFFYljDZsK3hjQVUBerE8U0TMSnpiol3slLcKtvY3ZDiSv+EIpmjjOVJqT4BlMB9+W+tYDDhb1uwBY+f9pa2kYgE4KUxA1uyn/HOi+KAYPK525EWnbfGM2xf001lwHDEo7W0fuooTi/WkUpz+WMKuxxhivCnE3WOTu1FCdBTCujfaLGsQwIDAQABo1AwTjAdBgNVHQ4EFgQU78XZNJmiTJXTwsXoPa1oXLbC0pkwHwYDVR0jBBgwFoAU78XZNJmiTJXTwsXoPa1oXLbC0pkwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAQf+N3RFE0qrcJ1R6PkfVBok3Pv3YV3C0BxKQkA4+3C56W16bVT27fBbLh2HL9UPfux2rzWJjBfthroz6hxFKs/OWmdKhBkjvpM5J261+HTQEbIuZEASq2DjS7CfUq4xAzL2GhBL440xmmWuMrcu7Mw6T8YedsVfid4P5bN4Wsa30Ffj+FgPdApiDOu4BLz7n632hZrKUk951ChdomJs/vLk1fu737IyzVzw0m3iMtR7MrU0FPBC+W9AxubmLTruaSnhOs6j9sJKhRmGqw9AyAxey19NaMy0O6qILTrlA2Pe+S1t2Xa0wWzB6cQu8v8viLnp5SKaWf/j69hwkf5139g==</ds:X509Certificate>
+      </ds:X509Data>
+    </ds:KeyInfo>
+  </ds:Signature>
 </cap:alert>

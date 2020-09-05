@@ -152,8 +152,9 @@ describe('consumer', () => {
       });
 
     nock(BASE_URL)
-      .get(/-([0-9])+(.xml)(?:[?#]|$)/i) // match alerts url
+      .get('/alert.xml') // match alerts url
       .query(true)
+      .times(2) // we have only 2 items
       .reply(200, function onReply() {
         expect(this.req.headers).to.exist;
         return createReadStream(`${__dirname}/fixtures/alert.xml`);
@@ -164,6 +165,7 @@ describe('consumer', () => {
         expect(alerts).to.exist.and.be.an('object');
         expect(alerts.channel).to.exist.and.be.an('object');
         expect(alerts.items).to.exist.and.be.an('array');
+        expect(alerts.items).to.have.length(2);
 
         const alert = alerts.items[0];
         expect(alert).to.exist;
