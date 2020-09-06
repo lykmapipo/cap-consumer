@@ -1,0 +1,30 @@
+{
+  "identifier": "urn:oid:2.49.0.1.834.0.2020.8.9.12.48.58",
+  "sender": "severe@meteo.go.tz",
+  "sent": "2020-08-09T12:48:58.000Z",
+  "status": "Actual",
+  "msgType": "Alert",
+  "scope": "Public",
+  "references": "severe@meteo.go.tz,urn:oid:2.49.0.1.834.0.2020.8.9.12.48.58,2020-08-09T15:48:58+03:00",
+  "info": {
+    "language": "en",
+    "category": "Met",
+    "event": "Strong wind and large waves.",
+    "responseType": "Monitor",
+    "urgency": "Expected",
+    "severity": "Moderate",
+    "certainty": "Likely",
+    "onset": "2020-08-09T15:00:00.000Z",
+    "expires": "2020-08-09T20:00:00.000Z",
+    "senderName": "Tanzania Meteorological Authority",
+    "headline": "YELLOW ADVISORY: Strong wind and large waves",
+    "description": "Strong wind and large waves are expected over coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.\n      Likelihood of occurrence is MEDIUM and expected Impacts are MODERATE.\n      The expected impacts of this phenomenon are disruption to marine activities.",
+    "instruction": "Sea users of high risk areas are advised TO BE PREPARED.\n      TMA will continue to monitor the situation and issue updates when necessary.",
+    "web": "http://www.meteo.go.tz",
+    "contact": "met@meteo.go.tz",
+    "area": {
+      "areaDesc": "coastal areas of Dar es salaam, Tanga, Pwani, Lindi and Mtwara regions together with Unguja and Pemba isles.",
+      "polygon": "-4.7,39.3 -5.2,38.6 -6.1,38.5 -6.9,39.3 -7.6,39.1 -8.4,39 -9.4,39.3 -10.4,39.7 -10.6,40.2 -10.1,40.6 -9.7,40.8 -9,40.3 -8.4,40 -6.8,40.2 -6.1,40.1 -5.2,39.9 -4.9,39.8 -4.7,39.3"
+    }
+  }
+}

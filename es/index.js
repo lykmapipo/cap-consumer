@@ -1,8 +1,8 @@
-import { omitBy, startsWith, isEmpty, map } from 'lodash';
-import { mergeObjects, hashOf, compact } from '@lykmapipo/common';
-import { parseCoordinateString, centroidOf } from '@lykmapipo/geo-tools';
+import { omitBy, startsWith, map } from 'lodash';
+import { mergeObjects, compact } from '@lykmapipo/common';
 import { processors, parseStringPromise } from 'xml2js';
 import { get, all } from '@lykmapipo/http-client';
+import { normalizeAlert } from '@lykmapipo/cap-common';
 import FeedParser from 'feedparser';
 
 /**
@@ -68,7 +68,8 @@ const normalize = (obj = {}) => {
       startsWith(key, 'atom') ||
       startsWith(key, '#') ||
       startsWith(key, '@') ||
-      startsWith(key, '$')
+      startsWith(key, '$') ||
+      startsWith(key, 'Signature')
     );
   });
   // return
@@ -94,39 +95,13 @@ const normalize = (obj = {}) => {
  *   .then(alert => { ... }) // => { identifier: ..., info: { ... } }
  *   .catch(error => { ... });
  */
-const parseAlert = alertXml => {
+const parseAlert = (alertXml) => {
   // parse alert xml
-  return parseStringPromise(alertXml, XML_PARSE_OPTIONS).then(alertJson => {
-    // preserve required attributes
-    const alert = mergeObjects(normalize(alertJson), { info: { area: {} } });
+  return parseStringPromise(alertXml, XML_PARSE_OPTIONS).then((alertJson) => {
+    // normalize & preserve required attributes
+    const alert = normalizeAlert(normalize(alertJson));
 
-    // compute hash
-    alert.hash = hashOf(alert);
-
-    // normalize sent date
-    alert.sent = !isEmpty(alert.sent) ? new Date(alert.sent) : alert.sent;
-
-    // normalize onset date
-    alert.info.onset = !isEmpty(alert.info.onset)
-      ? new Date(alert.info.onset)
-      : alert.info.onset;
-
-    // normalize expires date
-    alert.info.expires = !isEmpty(alert.info.expires)
-      ? new Date(alert.info.expires)
-      : alert.info.expires;
-
-    // parse circle and polygon to geojson geometry
-    if (!isEmpty(alert.info.area.polygon) || !isEmpty(alert.info.area.circle)) {
-      const coordinateString =
-        alert.info.area.polygon || alert.info.area.circle;
-      const geometry = parseCoordinateString(coordinateString);
-      const centroid = centroidOf(geometry);
-      alert.info.area.geometry = geometry;
-      alert.info.area.centroid = centroid;
-    }
-
-    // return alerts
+    // return normalized alerts
     return alert;
   });
 };
@@ -150,7 +125,7 @@ const parseAlert = alertXml => {
  *   .then(feed => { ... }) // => { channel: ..., items: { ... } }
  *   .catch(error => { ... });
  */
-const parseFeed = source =>
+const parseFeed = (source) =>
   new Promise((resolve, reject) => {
     // initialize feedparser
     const feedParser = new FeedParser({ addmeta: false });
@@ -159,16 +134,16 @@ const parseFeed = source =>
     const feed = { channel: {}, items: [] };
 
     // handle stream error
-    source.on('error', error => reject(error));
+    source.on('error', (error) => reject(error));
 
     // handle feed parsing errors
-    feedParser.on('error', error => reject(error));
+    feedParser.on('error', (error) => reject(error));
 
     // handle feed parsing end
     feedParser.on('end', () => resolve(feed));
 
     // handle feed meta parsing
-    feedParser.on('meta', meta => {
+    feedParser.on('meta', (meta) => {
       feed.channel = normalize(meta);
     });
 
@@ -212,7 +187,7 @@ const parseFeed = source =>
  *   .then(alert => { ... })
  *   .catch(error => { ... });
  */
-const fetchAlert = optns => {
+const fetchAlert = (optns) => {
   // normalize options
   const { url, ...options } = mergeObjects(optns, {
     responseType: 'text',
@@ -220,7 +195,7 @@ const fetchAlert = optns => {
   });
 
   // fetch alert
-  return get(url, options).then(alertXml => {
+  return get(url, options).then((alertXml) => {
     return parseAlert(alertXml);
   });
 };
@@ -247,7 +222,7 @@ const fetchAlert = optns => {
  *   .then(alert => { ... })
  *   .catch(error => { ... });
  */
-const fetchFeed = optns => {
+const fetchFeed = (optns) => {
   // normalize options
   const { url, ...options } = mergeObjects(optns, {
     responseType: 'stream',
@@ -255,7 +230,7 @@ const fetchFeed = optns => {
   });
 
   // fetch feed
-  return get(url, options).then(response => {
+  return get(url, options).then((response) => {
     return parseFeed(response);
   });
 };
@@ -282,15 +257,15 @@ const fetchFeed = optns => {
  *   .then(alert => { ... })
  *   .catch(error => { ... });
  */
-const fetchAlerts = optns => {
+const fetchAlerts = (optns) => {
   // fetch feed
   return fetchFeed(optns).then(({ channel = {}, items = [] }) => {
     // collect feed item links
-    const urls = compact(map([...items], item => item.link));
+    const urls = compact(map([...items], (item) => item.link));
     // prepare alert fetch promises
-    const tasks = map(urls, url => fetchAlert(mergeObjects(optns, { url })));
+    const tasks = map(urls, (url) => fetchAlert(mergeObjects(optns, { url })));
     // fetch alerts in parallel
-    return all(...tasks).then(alerts => {
+    return all(...tasks).then((alerts) => {
       // return alerts in CAP format
       return { channel, items: alerts };
     });

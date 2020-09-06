@@ -65,7 +65,8 @@ export const normalize = (obj = {}) => {
       startsWith(key, 'atom') ||
       startsWith(key, '#') ||
       startsWith(key, '@') ||
-      startsWith(key, '$')
+      startsWith(key, '$') ||
+      startsWith(key, 'Signature')
     );
   });
   // return

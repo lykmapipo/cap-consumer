@@ -1,8 +1,8 @@
-import { isEmpty, map } from 'lodash';
-import { compact, mergeObjects, hashOf } from '@lykmapipo/common';
-import { parseCoordinateString, centroidOf } from '@lykmapipo/geo-tools';
+import { map } from 'lodash';
+import { compact, mergeObjects } from '@lykmapipo/common';
 import { parseStringPromise as parseXml } from 'xml2js';
 import { all, get } from '@lykmapipo/http-client';
+import { normalizeAlert } from '@lykmapipo/cap-common';
 import FeedParser from 'feedparser';
 
 import { DEFAULT_REQUEST_HEADERS, XML_PARSE_OPTIONS, normalize } from './utils';
@@ -29,36 +29,10 @@ import { DEFAULT_REQUEST_HEADERS, XML_PARSE_OPTIONS, normalize } from './utils';
 export const parseAlert = (alertXml) => {
   // parse alert xml
   return parseXml(alertXml, XML_PARSE_OPTIONS).then((alertJson) => {
-    // preserve required attributes
-    const alert = mergeObjects(normalize(alertJson), { info: { area: {} } });
+    // normalize & preserve required attributes
+    const alert = normalizeAlert(normalize(alertJson));
 
-    // compute hash
-    alert.hash = hashOf(alert);
-
-    // normalize sent date
-    alert.sent = !isEmpty(alert.sent) ? new Date(alert.sent) : alert.sent;
-
-    // normalize onset date
-    alert.info.onset = !isEmpty(alert.info.onset)
-      ? new Date(alert.info.onset)
-      : alert.info.onset;
-
-    // normalize expires date
-    alert.info.expires = !isEmpty(alert.info.expires)
-      ? new Date(alert.info.expires)
-      : alert.info.expires;
-
-    // parse circle and polygon to geojson geometry
-    if (!isEmpty(alert.info.area.polygon) || !isEmpty(alert.info.area.circle)) {
-      const coordinateString =
-        alert.info.area.polygon || alert.info.area.circle;
-      const geometry = parseCoordinateString(coordinateString);
-      const centroid = centroidOf(geometry);
-      alert.info.area.geometry = geometry;
-      alert.info.area.centroid = centroid;
-    }
-
-    // return alerts
+    // return normalized alerts
     return alert;
   });
 };
