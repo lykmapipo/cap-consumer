@@ -1,3 +1,9 @@
+#### 0.2.0 (2020-09-06)
+
+##### Refactors
+
+*  use cap commons ([49d7dcae](https://github.com/lykmapipo/cap-consumer/commit/49d7dcaead955eceb518c22128c0b41425e2cfc6))
+
 #### 0.1.25 (2020-09-05)
 
 ##### Chores
