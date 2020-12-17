@@ -1,3 +1,9 @@
+#### 0.2.5 (2020-12-17)
+
+##### Chores
+
+* **deps:**  force latest version & audit fix ([5daf8edc](https://github.com/lykmapipo/cap-consumer/commit/5daf8edc558bbf059f185706fbe2012b1db5036d))
+
 #### 0.2.4 (2020-12-06)
 
 ##### Chores
