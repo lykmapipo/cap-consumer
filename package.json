@@ -1,6 +1,6 @@
 {
   "name": "@lykmapipo/cap-consumer",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Common Alert Protocol consumer",
   "main": "lib/index.js",
   "module": "es/index.js",
