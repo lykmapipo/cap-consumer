@@ -1,3 +1,19 @@
+#### 0.2.9 (2021-09-06)
+
+##### Chores
+
+* **deps:**  force latest version & audit fix ([13a55e01](https://github.com/lykmapipo/cap-consumer/commit/13a55e013339f2de8aaab59330c08186e37910d3))
+*  upgrade package scripts ([e905df19](https://github.com/lykmapipo/cap-consumer/commit/e905df197943c55f86e66fafd9a6da83eadafdb6))
+
+##### Documentation Changes
+
+* **readme:**  update travis badge source ([2bc50c5d](https://github.com/lykmapipo/cap-consumer/commit/2bc50c5dc08137a46cf50a6b9e85e508ec88de81))
+* **community:**  add security guide ([facea790](https://github.com/lykmapipo/cap-consumer/commit/facea7901a374d78c25a097462359e1bea7cccc7))
+
+##### Refactors
+
+* **deps:**  use latest version ([6083915a](https://github.com/lykmapipo/cap-consumer/commit/6083915ab0e010ffc3ce543c7b15cb44c83708f5))
+
 #### 0.2.8 (2021-02-10)
 
 ##### Chores
