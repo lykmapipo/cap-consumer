@@ -1,6 +1,6 @@
 # cap-consumer
 
-[![Build Status](https://travis-ci.org/lykmapipo/cap-consumer.svg?branch=master)](https://travis-ci.org/lykmapipo/cap-consumer)
+[![Build Status](https://app.travis-ci.com/lykmapipo/cap-consumer.svg?branch=master)](https://app.travis-ci.com/lykmapipo/cap-consumer)
 [![Dependencies Status](https://david-dm.org/lykmapipo/cap-consumer.svg)](https://david-dm.org/lykmapipo/cap-consumer)
 [![Coverage Status](https://coveralls.io/repos/github/lykmapipo/cap-consumer/badge.svg?branch=master)](https://coveralls.io/github/lykmapipo/cap-consumer?branch=master)
 [![GitHub License](https://img.shields.io/github/license/lykmapipo/cap-consumer)](https://github.com/lykmapipo/cap-consumer/blob/master/LICENSE) 
