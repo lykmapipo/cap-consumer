@@ -6,9 +6,11 @@
   "module": "es/index.js",
   "scripts": {
     "clean": "rimraf lib dist es umd logs",
+    "prepare": "husky install",
     "prebuild": "npm test && npm run clean",
     "build": "rollup -c",
-    "lint": "eslint --fix --ext .js src/ test/ rollup.config.js",
+    "lint": "eslint --fix --ext .js src/ test/ examples/ rollup.config.js",
+    "prettier": "prettier --write '**/*.{md,json,yml,html}'",
     "pretest": "npm run lint",
     "test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha --exit --timeout=8000 --require @babel/register test/**/*.spec.js",
     "test:unit": "NODE_ENV=test npm run pretest && NODE_ENV=test mocha --exit --timeout=8000 --require @babel/register test/unit/**/*.spec.js",
@@ -18,7 +20,8 @@
     "cmt": "git add -A && git-cz",
     "changelog": "changelog",
     "chore:deps": "ncu -u && npm install --save",
-    "lint:config": "eslint --print-config rollup.config.js"
+    "lint:config": "eslint --print-config rollup.config.js",
+    "examples": "NODE_ENV=development BASE_PATH=./examples babel-node ./examples/index.js"
   },
   "keywords": [
     "lykmapipo",
