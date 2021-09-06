@@ -1,11 +1,11 @@
-import { fetchFeed } from '@lykmapipo/cap-consumer';
+import { fetchFeed } from '../src';
 
 const fromUrl = '';
 
 fetchFeed(fromUrl)
-  .then(feed => {
-    console.log(data);
+  .then((feed) => {
+    console.log(feed);
   })
-  .catch(error => {
+  .catch((error) => {
     console.log(error);
   });

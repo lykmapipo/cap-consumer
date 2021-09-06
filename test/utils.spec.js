@@ -28,12 +28,12 @@ describe('utils', () => {
 
   it('should normalize object value', () => {
     const obj = {
-      uid: faker.random.uuid(),
-      rss: faker.random.uuid(),
-      atom: faker.random.uuid(),
-      '#': faker.random.uuid(),
-      '@': faker.random.uuid(),
-      $: faker.random.uuid(),
+      uid: faker.datatype.uuid(),
+      rss: faker.datatype.uuid(),
+      atom: faker.datatype.uuid(),
+      '#': faker.datatype.uuid(),
+      '@': faker.datatype.uuid(),
+      $: faker.datatype.uuid(),
     };
     const normalized = normalize(obj);
     expect(normalized).to.be.eql({ uid: obj.uid });
