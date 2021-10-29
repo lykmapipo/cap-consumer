@@ -83,7 +83,7 @@
     "generate-changelog": "^1.8.0",
     "handlebars": "^4.7.7",
     "husky": "^7.0.4",
-    "lint-staged": "^11.2.3",
+    "lint-staged": "^11.2.6",
     "lodash.template": "^4.5.0",
     "minimist": "^1.2.5",
     "mocha": "^9.1.3",
@@ -92,7 +92,7 @@
     "nyc": "^15.1.0",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
-    "rollup": "^2.58.0",
+    "rollup": "^2.58.3",
     "shelljs": "^0.8.4",
     "websocket-extensions": "^0.1.4"
   },
@@ -103,7 +103,7 @@
     "@lykmapipo/env": ">=0.17.39",
     "@lykmapipo/geo-tools": ">=0.7.27",
     "@lykmapipo/http-client": ">=0.5.12",
-    "async": ">=3.2.1",
+    "async": ">=3.2.2",
     "feedparser": ">=2.2.10",
     "lodash": ">=4.17.21",
     "xml2js": ">=0.4.23"
